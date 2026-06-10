@@ -1,67 +1,221 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>KG MASS (PTY) | Plumbing</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>KG MASS (PTY) | Premium Plumbing</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Inter, sans-serif;
+}
+
+body{
+  background:#05070d;
+  color:white;
+  overflow-x:hidden;
+}
+
+/* NAV */
+nav{
+  position:fixed;
+  width:100%;
+  top:0;
+  padding:18px 40px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  background:rgba(0,0,0,0.4);
+  backdrop-filter:blur(12px);
+  z-index:100;
+}
+
+nav h1{
+  font-size:18px;
+  letter-spacing:2px;
+}
+
+nav span{
+  color:#00d4ff;
+}
+
+nav a{
+  background:#00d4ff;
+  color:black;
+  padding:10px 16px;
+  border-radius:8px;
+  font-weight:700;
+  text-decoration:none;
+}
+
+/* HERO */
+.hero{
+  height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  position:relative;
+  padding:20px;
+  background:url('https://images.unsplash.com/photo-1600566752355-35792bedcfea?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+}
+
+.hero::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:radial-gradient(circle, rgba(0,0,0,0.2), rgba(0,0,0,0.95));
+}
+
+.hero-content{
+  position:relative;
+  max-width:800px;
+  animation:fadeUp 1.2s ease forwards;
+  opacity:0;
+  transform:translateY(30px);
+}
+
+.hero h2{
+  font-size:54px;
+  font-weight:800;
+  margin-bottom:10px;
+}
+
+.hero p{
+  opacity:0.7;
+  font-size:16px;
+}
+
+.btn{
+  display:inline-block;
+  margin-top:25px;
+  background:#00d4ff;
+  color:black;
+  padding:12px 20px;
+  border-radius:10px;
+  font-weight:700;
+  text-decoration:none;
+}
+
+/* SECTIONS */
+section{
+  padding:100px 20px;
+  text-align:center;
+}
+
+h3{
+  font-size:30px;
+  margin-bottom:40px;
+  color:#00d4ff;
+}
+
+/* CARDS */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));
+  gap:20px;
+  max-width:1000px;
+  margin:auto;
+}
+
+.card{
+  background:rgba(255,255,255,0.05);
+  border:1px solid rgba(255,255,255,0.1);
+  padding:25px;
+  border-radius:15px;
+  backdrop-filter:blur(10px);
+  transition:0.4s;
+  opacity:0;
+  transform:translateY(30px);
+}
+
+.card.show{
+  opacity:1;
+  transform:translateY(0);
+}
+
+.card:hover{
+  transform:translateY(-8px);
+  border-color:#00d4ff;
+}
+
+/* FOOTER */
+footer{
+  padding:40px;
+  text-align:center;
+  opacity:0.6;
+  border-top:1px solid rgba(255,255,255,0.1);
+}
+
+/* ANIMATION */
+@keyframes fadeUp{
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+</style>
 </head>
 
-<body style="margin:0;font-family:Arial;background:#0b0f19;color:white;">
+<body>
 
-<!-- HEADER -->
-<div style="display:flex;justify-content:space-between;align-items:center;padding:20px;background:#111827;position:sticky;top:0;">
-  <h2 style="margin:0;">KG MASS <span style="color:#00d4ff;">(PTY)</span></h2>
-  <a href="tel:0827644967" style="background:#00d4ff;padding:10px 15px;color:black;text-decoration:none;border-radius:6px;font-weight:bold;">Call Now</a>
-</div>
+<nav>
+  <h1>KG MASS <span>(PTY)</span></h1>
+  <a href="tel:0827644967">Call Now</a>
+</nav>
 
-<!-- HERO -->
-<div style="padding:80px 20px;text-align:center;background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.9)), url('https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc');background-size:cover;background-position:center;">
-  <h1 style="font-size:40px;margin-bottom:10px;">Fast & Reliable Plumbing</h1>
-  <p style="opacity:0.8;">Modimolle trusted plumbing services</p>
-  <a href="#services" style="display:inline-block;margin-top:20px;background:#00d4ff;color:black;padding:12px 20px;border-radius:8px;text-decoration:none;font-weight:bold;">Our Services</a>
-</div>
-
-<!-- SERVICES -->
-<div id="services" style="padding:60px 20px;text-align:center;">
-  <h2>Services</h2>
-
-  <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:15px;margin-top:20px;">
-
-    <div style="background:#1f2937;padding:20px;width:150px;border-radius:10px;">Leak Repairs</div>
-    <div style="background:#1f2937;padding:20px;width:150px;border-radius:10px;">Pipe Install</div>
-    <div style="background:#1f2937;padding:20px;width:150px;border-radius:10px;">Drain Cleaning</div>
-    <div style="background:#1f2937;padding:20px;width:150px;border-radius:10px;">Bathroom Plumbing</div>
-    <div style="background:#1f2937;padding:20px;width:150px;border-radius:10px;">Maintenance</div>
-    <div style="background:#1f2937;padding:20px;width:150px;border-radius:10px;">Emergency Calls</div>
-
+<div class="hero">
+  <div class="hero-content">
+    <h2>Premium Plumbing Services</h2>
+    <p>Fast. Reliable. Professional workmanship across Modimolle.</p>
+    <a class="btn" href="#services">Explore Services</a>
   </div>
 </div>
 
-<!-- ABOUT -->
-<div style="padding:60px 20px;text-align:center;background:#111827;">
-  <h2>About Us</h2>
-  <p style="max-width:600px;margin:auto;opacity:0.8;">
-    KG MASS (PTY) provides reliable plumbing services in Modimolle and surrounding areas.
-    We focus on fast response, quality work, and customer satisfaction.
-  </p>
-</div>
+<section id="services">
+  <h3>Our Services</h3>
 
-<!-- CONTACT -->
-<div style="padding:60px 20px;text-align:center;">
-  <h2>Contact</h2>
-  <p>📍 Modimolle, Limpopo</p>
-  <p>📞 082 764 4967</p>
+  <div class="grid">
+    <div class="card">Leak Repairs</div>
+    <div class="card">Pipe Installation</div>
+    <div class="card">Drain Cleaning</div>
+    <div class="card">Bathroom Plumbing</div>
+    <div class="card">Emergency Callouts</div>
+    <div class="card">Maintenance</div>
+  </div>
+</section>
 
-  <a href="https://wa.me/27827644967" 
-     style="display:inline-block;margin-top:15px;background:#25d366;color:black;padding:12px 20px;border-radius:8px;text-decoration:none;font-weight:bold;">
-     WhatsApp Us
-  </a>
-</div>
+<section>
+  <h3>Why Choose Us</h3>
+  <div class="grid">
+    <div class="card">24/7 Emergency Support</div>
+    <div class="card">Affordable Pricing</div>
+    <div class="card">Skilled Technicians</div>
+  </div>
+</section>
 
-<!-- FOOTER -->
-<div style="text-align:center;padding:20px;background:black;opacity:0.7;">
-  © KG MASS (PTY)
-</div>
+<footer>
+  © KG MASS (PTY) — All Rights Reserved
+</footer>
+
+<script>
+const cards = document.querySelectorAll(".card");
+
+const observer = new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      entry.target.classList.add("show");
+    }
+  });
+});
+
+cards.forEach(card=>observer.observe(card));
+</script>
 
 </body>
 </html>
