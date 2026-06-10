@@ -3,202 +3,65 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>KG MASS (PTY) | Premium Plumbing</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-<style>
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family:Poppins;
-}
-
-body{
-  background:#05070d;
-  color:white;
-  overflow-x:hidden;
-}
-
-/* NAV */
-nav{
-  position:fixed;
-  width:100%;
-  top:0;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:20px 40px;
-  z-index:10;
-  background:rgba(0,0,0,0.3);
-  backdrop-filter:blur(10px);
-}
-
-nav h1 span{color:#00d4ff;}
-
-nav a{
-  background:#00d4ff;
-  color:black;
-  padding:10px 15px;
-  border-radius:8px;
-  text-decoration:none;
-  font-weight:700;
-}
-
-/* HERO VIDEO */
-.hero{
-  height:100vh;
-  position:relative;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-  overflow:hidden;
-}
-
-.hero video{
-  position:absolute;
-  width:100%;
-  height:100%;
-  object-fit:cover;
-}
-
-.overlay{
-  position:absolute;
-  width:100%;
-  height:100%;
-  background:radial-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.95));
-}
-
-.hero-content{
-  position:relative;
-  z-index:2;
-}
-
-.hero h2{
-  font-size:55px;
-  opacity:0;
-  transform:translateY(30px);
-  animation:fadeUp 1s forwards;
-}
-
-.hero p{
-  margin-top:10px;
-  opacity:0.7;
-}
-
-.btn{
-  display:inline-block;
-  margin-top:20px;
-  background:#00d4ff;
-  color:black;
-  padding:12px 20px;
-  border-radius:10px;
-  text-decoration:none;
-  font-weight:700;
-}
-
-/* GLASS SECTIONS */
-.section{
-  padding:100px 20px;
-  text-align:center;
-}
-
-.cards{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-  gap:20px;
-  max-width:1000px;
-  margin:auto;
-}
-
-.card{
-  background:rgba(255,255,255,0.05);
-  border:1px solid rgba(255,255,255,0.1);
-  padding:30px;
-  border-radius:15px;
-  backdrop-filter:blur(10px);
-  transform:translateY(40px);
-  opacity:0;
-  transition:0.6s ease;
-}
-
-.card.show{
-  transform:translateY(0);
-  opacity:1;
-}
-
-footer{
-  text-align:center;
-  padding:30px;
-  opacity:0.6;
-}
-
-/* ANIMATION */
-@keyframes fadeUp{
-  to{
-    opacity:1;
-    transform:translateY(0);
-  }
-}
-</style>
+<title>KG MASS (PTY) | Plumbing</title>
 </head>
 
-<body>
+<body style="margin:0;font-family:Arial;background:#0b0f19;color:white;">
 
-<!-- NAV -->
-<nav>
-  <h1>KG MASS <span>(PTY)</span></h1>
-  <a href="tel:0827644967">Call Now</a>
-</nav>
+<!-- HEADER -->
+<div style="display:flex;justify-content:space-between;align-items:center;padding:20px;background:#111827;position:sticky;top:0;">
+  <h2 style="margin:0;">KG MASS <span style="color:#00d4ff;">(PTY)</span></h2>
+  <a href="tel:0827644967" style="background:#00d4ff;padding:10px 15px;color:black;text-decoration:none;border-radius:6px;font-weight:bold;">Call Now</a>
+</div>
 
-<!-- HERO VIDEO -->
-<section class="hero">
-  <video autoplay muted loop>
-    <source src="https://cdn.pixabay.com/video/2019/06/11/24408-345287921_large.mp4" type="video/mp4">
-  </video>
-
-  <div class="overlay"></div>
-
-  <div class="hero-content">
-    <h2>Luxury Plumbing Solutions</h2>
-    <p>Fast. Reliable. Premium workmanship in Modimolle.</p>
-    <a class="btn" href="#services">Explore</a>
-  </div>
-</section>
+<!-- HERO -->
+<div style="padding:80px 20px;text-align:center;background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.9)), url('https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc');background-size:cover;background-position:center;">
+  <h1 style="font-size:40px;margin-bottom:10px;">Fast & Reliable Plumbing</h1>
+  <p style="opacity:0.8;">Modimolle trusted plumbing services</p>
+  <a href="#services" style="display:inline-block;margin-top:20px;background:#00d4ff;color:black;padding:12px 20px;border-radius:8px;text-decoration:none;font-weight:bold;">Our Services</a>
+</div>
 
 <!-- SERVICES -->
-<section class="section" id="services">
+<div id="services" style="padding:60px 20px;text-align:center;">
   <h2>Services</h2>
 
-  <div class="cards">
-    <div class="card">Leak Repairs</div>
-    <div class="card">Pipe Installation</div>
-    <div class="card">Drain Cleaning</div>
-    <div class="card">Bathroom Fitting</div>
-    <div class="card">Emergency Call-outs</div>
-    <div class="card">Maintenance</div>
+  <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:15px;margin-top:20px;">
+
+    <div style="background:#1f2937;padding:20px;width:150px;border-radius:10px;">Leak Repairs</div>
+    <div style="background:#1f2937;padding:20px;width:150px;border-radius:10px;">Pipe Install</div>
+    <div style="background:#1f2937;padding:20px;width:150px;border-radius:10px;">Drain Cleaning</div>
+    <div style="background:#1f2937;padding:20px;width:150px;border-radius:10px;">Bathroom Plumbing</div>
+    <div style="background:#1f2937;padding:20px;width:150px;border-radius:10px;">Maintenance</div>
+    <div style="background:#1f2937;padding:20px;width:150px;border-radius:10px;">Emergency Calls</div>
+
   </div>
-</section>
+</div>
 
-<footer>
+<!-- ABOUT -->
+<div style="padding:60px 20px;text-align:center;background:#111827;">
+  <h2>About Us</h2>
+  <p style="max-width:600px;margin:auto;opacity:0.8;">
+    KG MASS (PTY) provides reliable plumbing services in Modimolle and surrounding areas.
+    We focus on fast response, quality work, and customer satisfaction.
+  </p>
+</div>
+
+<!-- CONTACT -->
+<div style="padding:60px 20px;text-align:center;">
+  <h2>Contact</h2>
+  <p>📍 Modimolle, Limpopo</p>
+  <p>📞 082 764 4967</p>
+
+  <a href="https://wa.me/27827644967" 
+     style="display:inline-block;margin-top:15px;background:#25d366;color:black;padding:12px 20px;border-radius:8px;text-decoration:none;font-weight:bold;">
+     WhatsApp Us
+  </a>
+</div>
+
+<!-- FOOTER -->
+<div style="text-align:center;padding:20px;background:black;opacity:0.7;">
   © KG MASS (PTY)
-</footer>
-
-<script>
-const cards = document.querySelectorAll('.card');
-
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if(entry.isIntersecting){
-      entry.target.classList.add('show');
-    }
-  });
-});
-
-cards.forEach(card => observer.observe(card));
-</script>
+</div>
 
 </body>
 </html>
